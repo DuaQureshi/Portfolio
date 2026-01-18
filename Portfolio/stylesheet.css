@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1b0b0b;
+    color: #ffffff;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 10%;
+    background: #801515; /* dark marlot */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: #ffffff;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #f5e6c8;
+}
+
+/* HOME */
+.home {
+    height: 100vh;
+    background: url("bg.png") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    padding: 140px 10%;
+    position: relative;
+}
+
+/* HOME CONTENT TEXT SIZE + GAP */
+.home-content h3 {
+    font-size: 20px;          /* INCREASED */
+    margin-bottom: 14px;     /* GAP */
+    color: #ffffff;
+}
+
+.home-content h1 {
+    font-size: 50px;          /* INCREASED */
+    margin-bottom: 18px;     /* GAP */
+    color: #ffffff;
+}
+
+.home-content p {
+    font-size: 14px;          /* INCREASED */
+    line-height: 1.9;
+    margin-top: 18px;
+    margin-bottom: 28px;
+    color: #ffffff;
+}
+
+/* TYPED TEXT – NO BACKGROUND */
+.home-content h3 span {
+    color: #ffea74;           /* butter cream */
+    font-weight: 600;
+    background: none;        /* ❌ REMOVED */
+    padding: 0;
+}
+
+/* SOCIAL ICONS */
+.home-sci a {
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f5e6c8;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: #f5e6c8;
+    margin-right: 14px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.home-sci a:hover {
+    background: #f5e6c8;
+    color: #801515;
+}
+
+/* IMAGE POSITION */
+.home-img {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* IMAGE CIRCLE WITH BUTTER CREAM SHADOW */
+.circle {
+    width: 460px;            /* SLIGHTLY BIGGER */
+    height: 460px;
+    padding: 30px;
+    border-radius: 80%;
+    border: 5px solid #f5e6c8;
+    box-shadow:
+        0 0 40px rgba(245, 230, 200, 0.8),
+        0 0 120px rgba(240, 215, 166, 0.6);
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* BUTTON */
+.btn-box {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 36px;
+    background: #801515;
+    border-radius: 40px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.btn-box:hover {
+    background: #f5e6c8;
+    color: #801515;
+}
+
+/* ABOUT SECTION */
+.about {
+    width: 100%;
+    min-height: 100vh;
+    background: url("bg.png") no-repeat center/cover; /* ✅ BG IMAGE */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 10%;
+    gap: 80px;
+}
+
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 52px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.about-content h2 span {
+    color: #f5e6c8; /* butter cream */
+}
+
+.about-content h4 {
+    font-size: 26px;
+    color: #f5e6c8;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+
+/* SERVICES SECTION */
+.services {
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px 10%;
+    background: url("bg.png") no-repeat center/cover;
+    text-align: center;
+    color: #ffffff;
+}
+
+.services h2 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.services h2 span {
+    color: #f5e6c8; /* butter cream */
+}
+
+/* MARLOT LINE SHADOW */
+/* MARLOT LINE SHADOW ONLY ABOVE AND BELOW SECTION */
+
+
+
+/* SERVICE CARDS */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: #1b0b0b;
+    border: 2px solid #801515;
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1 1 300px;
+    box-shadow: 0 0 15px rgba(128, 21, 21, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #801515, 0 0 50px #801515;
+}
+
+.service-icon {
+    font-size: 50px;
+    color: #f5e6c8;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.service-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.service-card .btn-box {
+    background: #801515;
+    color: #ffffff;
+}
+
+.service-card .btn-box:hover {
+    background: #f5e6c8;
+    color: #801515;
+}
+
+.skills {
+    width: 100%;
+    min-height: 100vh;
+    background: url("bg.png") no-repeat center/cover; /* same as services */
+    color: #ffffff;
+    padding: 120px 10%;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.skills h2 span {
+    color: #f5e6c8; /* butter cream */
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* TECHNICAL SKILLS */
+.technical-skills {
+    flex: 1;
+}
+
+.technical-skills h3 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f5e6c8; /* butter cream */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skill-bar {
+    margin-bottom: 25px;
+}
+
+.skill-bar .label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.skill-bar .progress {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar .progress .progress-fill {
+    height: 100%;
+    width: 0;
+    background: #f5e6c8; /* butter cream */
+    border-radius: 6px;
+    position: relative;
+    transition: width 2s ease;
+}
+
+.skill-bar .progress .percent {
+    position: absolute;
+    right: 8px;
+    top: -2px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* PROFESSIONAL SKILLS */
+.professional-skills {
+    flex: 1;
+}
+
+.professional-skills h3 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f5e6c8; /* butter cream */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.circular-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.circular-skill {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.circular-skill svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.circular-skill circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.circular-skill circle.bg {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+.circular-skill circle.progress {
+    stroke: #f5e6c8; /* butter cream */
+    stroke-dasharray: 314; /* 2πr where r=50 */
+    stroke-dashoffset: 314;
+    transition: stroke-dashoffset 2s ease;
+}
+
+.circular-skill .skill-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* PROJECTS SECTION */
+.projects {
+    width: 100%;
+    min-height: 100vh;
+    background: url("bg.png") no-repeat center/cover;
+    padding: 120px 10%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.projects h2 {
+    font-size: 52px;
+    margin-bottom: 60px;
+}
+
+.projects h2 span {
+    color: #f5e6c8; /* butter cream */
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* PROJECT CARD */
+.project-card {
+    background: #1b0b0b;
+    border: 2px solid #801515; /* marlot */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+        -6px 0 20px rgba(245, 230, 200, 0.4),
+         6px 0 20px rgba(128, 21, 21, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow:
+        -10px 0 30px rgba(245, 230, 200, 0.7),
+         10px 0 30px rgba(128, 21, 21, 0.9);
+}
+
+/* PROJECT IMAGE */
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* PROJECT TITLE */
+.project-card h3 {
+    padding: 18px;
+    font-size: 20px;
+    color: #f5e6c8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.contact {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("bg.png") no-repeat center/cover;
+    padding-top: 120px;   /* header se neeche */
+}
+/* GLASS CARD */
+.contact-container {
+    width: 80%;
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+    border-radius: 20px;
+    background: rgba(75, 0, 20, 0.85); /* marlot */
+    backdrop-filter: blur(8px);
+}
+
+/* LEFT */
+.contact-left {
+    width: 50%;
+    color: #fff3e0; /* butter cream */
+}
+
+.contact-left h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.contact-left h2 span {
+    color: #f5deb3;
+}
+
+.contact-left p {
+    margin-bottom: 20px;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
+.info i {
+    color: #f5deb3;
+    margin-right: 8px;
+}
+
+/* SOCIAL */
+.social a {
+    width: 55px;     /* 🔼 size increase */
+    height: 55px;
+    font-size: 26px;     
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;              /* ❌ line remove */
+    background: rgba(245,222,179,0.15);
+    color: #f5deb3;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+background: #f5deb3;
+    color: #4b0014;}
+    /* RIGHT */
+.contact-right {
+    width: 50%;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #fff3e0;
+    color: #4b0014;
+}
+
+.contact-right button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: #f5deb3;
+    color: #4b0014;
+    font-weight: bold;
+    cursor: pointer;
+}
